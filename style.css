@@ -1,0 +1,1011 @@
+/* =========================================
+   CHRONOS
+   A JOURNEY THROUGH HUMAN HISTORY
+   ========================================= */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #10101a;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.navbar {
+    height: 75px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 7%;
+
+    background-color: rgba(16, 16, 26, 0.92);
+
+    border-bottom: 1px solid #303044;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px #8f7cff,
+        0 0 25px #5d4dff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #b9b8cc;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    text-shadow: 0 0 10px #8f7cff;
+}
+
+
+/* =========================================
+   GENERAL LABELS
+   ========================================= */
+
+.small-title,
+.section-label {
+    color: #a995ff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 90px 10%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            #ff6b9d 0%,
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 80% 20%,
+            #765cff 0%,
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 70% 85%,
+            #00c2ff 0%,
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #17152b,
+            #111827 50%,
+            #10101a
+        );
+}
+
+
+/* Decorative circles */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255, 255, 255, 0.12);
+
+    right: 8%;
+    top: 18%;
+
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero::after {
+    content: "✦";
+
+    position: absolute;
+
+    font-size: 150px;
+
+    color: rgba(255, 255, 255, 0.08);
+
+    right: 15%;
+    bottom: 8%;
+
+    animation: spin 15s linear infinite;
+}
+
+.hero-content {
+    max-width: 850px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 100px);
+
+    line-height: 0.92;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+
+    text-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.4);
+}
+
+.hero-text {
+    color: #d0d0df;
+
+    max-width: 600px;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.main-button,
+.second-button {
+    display: inline-block;
+
+    padding: 15px 24px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.main-button {
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #dcd5ff
+    );
+
+    color: #17152b;
+
+    box-shadow:
+        0 8px 25px rgba(139, 124, 255, 0.3);
+}
+
+.main-button:hover {
+    transform: translateY(-5px) scale(1.03);
+
+    box-shadow:
+        0 12px 35px rgba(139, 124, 255, 0.5);
+}
+
+.second-button {
+    border: 1px solid #77728f;
+
+    color: white;
+
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.second-button:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+
+    border-color: white;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   INTRO
+   ========================================= */
+
+.intro {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 130px 30px;
+}
+
+.intro h1,
+.intro h2 {
+    font-size: 52px;
+
+    line-height: 1.05;
+
+    margin-bottom: 30px;
+}
+
+.intro > p:last-child {
+    color: #aaaabd;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   ERAS
+   ========================================= */
+
+.eras {
+    padding: 110px 7%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17152b,
+            #10101a
+        );
+}
+
+.section-heading {
+    margin-bottom: 50px;
+}
+
+.section-heading h2,
+.featured h2 {
+    font-size: 50px;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   ERA CARDS
+   ========================================= */
+
+.era-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 22px;
+}
+
+.era-card {
+    min-height: 320px;
+
+    padding: 30px;
+
+    border: 1px solid #34344b;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.02)
+        );
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+.era-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    background-color: #765cff;
+
+    opacity: 0.12;
+
+    right: -40px;
+    top: -40px;
+
+    transition: 0.4s;
+}
+
+.era-card:hover {
+    transform: translateY(-10px) rotate(-1deg);
+
+    border-color: #8f7cff;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.era-card:hover::before {
+    transform: scale(2);
+    opacity: 0.2;
+}
+
+.era-card span {
+    color: #8f7cff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.era-card h3 {
+    margin-top: 60px;
+
+    margin-bottom: 15px;
+
+    font-size: 25px;
+}
+
+.era-card p {
+    color: #a5a5b8;
+
+    line-height: 1.7;
+}
+
+.era-card a {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.era-card a:hover {
+    color: #a995ff;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   FEATURED CIVILIZATIONS
+   ========================================= */
+
+.featured {
+    padding: 120px 7%;
+
+    background-color: #12121f;
+}
+
+.featured h2 {
+    margin-bottom: 50px;
+}
+
+.featured-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+}
+
+.civilization-card {
+    min-height: 250px;
+
+    padding: 32px;
+
+    border-radius: 18px;
+
+    border: 1px solid #35354c;
+
+    background:
+        linear-gradient(
+            135deg,
+            #24203d,
+            #171725
+        );
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+
+/* Different colorful glow for each card */
+
+.civilization-card:nth-child(1) {
+    background:
+        linear-gradient(
+            135deg,
+            #443516,
+            #1b1922
+        );
+}
+
+.civilization-card:nth-child(2) {
+    background:
+        linear-gradient(
+            135deg,
+            #163b4a,
+            #171725
+        );
+}
+
+.civilization-card:nth-child(3) {
+    background:
+        linear-gradient(
+            135deg,
+            #481b32,
+            #171725
+        );
+}
+
+.civilization-card::after {
+    content: "✦";
+
+    position: absolute;
+
+    font-size: 100px;
+
+    right: -15px;
+    bottom: -35px;
+
+    color: rgba(255, 255, 255, 0.06);
+}
+
+.civilization-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #8f7cff;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.civilization-card h3 {
+    margin-bottom: 20px;
+
+    letter-spacing: 2px;
+}
+
+.civilization-card p {
+    color: #aaaabd;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CIVILIZATION PAGE
+   ========================================= */
+
+.civilization-header {
+    padding: 150px 10% 110px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            #ffb84d 0%,
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            #e85d75 0%,
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #302313,
+            #171522,
+            #10101a
+        );
+}
+
+.civilization-header::after {
+    content: "𓂀";
+
+    position: absolute;
+
+    right: 10%;
+    top: 20%;
+
+    font-size: 170px;
+
+    opacity: 0.12;
+
+    animation: float 5s ease-in-out infinite;
+}
+
+.civilization-header h1 {
+    font-size: clamp(55px, 9vw, 110px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+}
+
+.civilization-header > p:last-child {
+    max-width: 650px;
+
+    color: #d0cbd1;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FACTS
+   ========================================= */
+
+.facts {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    background-color: #161622;
+
+    border-bottom: 1px solid #303044;
+}
+
+.fact {
+    padding: 38px;
+
+    border-right: 1px solid #303044;
+}
+
+.fact:last-child {
+    border-right: none;
+}
+
+.fact span {
+    color: #8f7cff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.fact h3 {
+    margin-top: 12px;
+
+    font-size: 17px;
+
+    color: #eeeeee;
+}
+
+
+/* =========================================
+   HISTORY SECTION
+   ========================================= */
+
+.history-section {
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 130px 30px;
+}
+
+.history-section h2,
+.periods h2,
+.achievements h2 {
+    font-size: 48px;
+
+    line-height: 1.05;
+
+    margin-bottom: 30px;
+}
+
+.history-section p:not(.section-label) {
+    color: #aaaabd;
+
+    line-height: 1.9;
+
+    font-size: 17px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   PERIODS
+   ========================================= */
+
+.periods {
+    padding: 110px 7%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #15152a,
+            #10101a
+        );
+}
+
+.period-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 22px;
+
+    margin-top: 50px;
+}
+
+.period-card {
+    min-height: 280px;
+
+    padding: 30px;
+
+    border: 1px solid #34344b;
+
+    border-radius: 16px;
+
+    background-color: #191927;
+
+    transition: 0.35s;
+}
+
+.period-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #ffb84d;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.period-card span {
+    color: #ffb84d;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.period-card h3 {
+    margin-top: 45px;
+
+    margin-bottom: 15px;
+
+    font-size: 21px;
+}
+
+.period-card p {
+    color: #9999ad;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ACHIEVEMENTS
+   ========================================= */
+
+.achievements {
+    padding: 120px 7%;
+
+    background-color: #12121f;
+}
+
+.achievement-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 22px;
+
+    margin-top: 50px;
+}
+
+.achievement-card {
+    padding: 35px;
+
+    min-height: 230px;
+
+    border: 1px solid #35354c;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #211d36,
+            #151522
+        );
+
+    transition: 0.35s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #45d6ff;
+}
+
+.achievement-card h3 {
+    margin-bottom: 20px;
+
+    letter-spacing: 2px;
+}
+
+.achievement-card p {
+    color: #9999ad;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   BACK BUTTON
+   ========================================= */
+
+.back-section {
+    padding: 40px 7% 100px;
+
+    background-color: #12121f;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 75px 7%;
+
+    border-top: 1px solid #303044;
+
+    background-color: #0b0b12;
+
+    color: #77778d;
+}
+
+footer h2 {
+    color: white;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    font-size: 12px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .facts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fact:nth-child(2) {
+        border-right: none;
+    }
+
+    .fact:nth-child(3),
+    .fact:nth-child(4) {
+        border-top: 1px solid #303044;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 70px 25px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .intro {
+        padding: 90px 25px;
+    }
+
+    .intro h1,
+    .intro h2 {
+        font-size: 38px;
+    }
+
+    .civilization-header {
+        padding: 100px 25px 80px;
+    }
+
+    .civilization-header h1 {
+        letter-spacing: -2px;
+    }
+
+    .history-section {
+        padding: 90px 25px;
+    }
+
+    .history-section h2,
+    .periods h2,
+    .achievements h2 {
+        font-size: 38px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .facts {
+        grid-template-columns: 1fr;
+    }
+
+    .fact {
+        border-right: none;
+
+        border-bottom: 1px solid #303044;
+    }
+
+    .fact:last-child {
+        border-bottom: none;
+    }
+
+}
